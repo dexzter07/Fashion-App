@@ -4,29 +4,24 @@ import 'app_colors.dart';
 
 class CustomTextStyle {
 
+  static ultraBoldTextStyle({Color color,double letterSpacing}){
+    return TextStyle( fontSize:24,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: "PoppinsBold",letterSpacing: letterSpacing==null? null : letterSpacing  );
+  }
+
   static boldTextStyle({Color color,fontFamily}){
-    return TextStyle( fontSize:22,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: fontFamily ?? "Cabin" );
+    return TextStyle( fontSize:22,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: fontFamily ?? "PoppinsRegular" );
   }
 
   static bigTextStyle({Color color}){
     return TextStyle( fontSize:20,fontWeight: FontWeight.w600,color: color==null?AppColors.textDarkColor:color,fontFamily:"PoppinsRegular" );
   }
 
-
-  static ultraBoldTextStyle({Color color,double letterSpacing}){
-    return TextStyle( fontSize:24,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: "PoppinsBold",letterSpacing: letterSpacing==null? null : letterSpacing  );
-  }
-
-  static ultraBoldTextStyleForHeading({Color color}){
-    return TextStyle( fontSize:24,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: "MetroPolisRegular" );
-  }
-
   static appBarTextStyle({Color color,fontFamily}){
-    return TextStyle( fontSize:18,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily:fontFamily==null?  "MetroPolisRegular" : fontFamily );
+    return TextStyle( fontSize:18,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily:fontFamily==null?  "PoppinsRegular" : fontFamily );
   }
 
   static boldMediumTextStyle({Color color,fontFamily}){
-    return TextStyle( fontSize:16,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: fontFamily==null ? "Cabin" : fontFamily );
+    return TextStyle( fontSize:16,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: fontFamily==null ? "PoppinsRegular" : fontFamily );
   }
 
   static mediumTextStyle({Color color}){
