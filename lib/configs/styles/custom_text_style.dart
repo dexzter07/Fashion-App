@@ -17,7 +17,7 @@ class CustomTextStyle {
   }
 
   static appBarTextStyle({Color color,fontFamily}){
-    return TextStyle( fontSize:18,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily:fontFamily==null?  "PoppinsRegular" : fontFamily );
+    return TextStyle( fontSize:20,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily:fontFamily==null?  "PoppinsRegular" : fontFamily );
   }
 
   static boldMediumTextStyle({Color color,fontFamily}){

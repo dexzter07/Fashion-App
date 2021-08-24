@@ -2,6 +2,7 @@ import 'package:fiona_fashion/configs/constants/app_constants.dart';
 import 'package:fiona_fashion/configs/styles/app_colors.dart';
 import 'package:fiona_fashion/configs/styles/custom_text_style.dart';
 import 'package:fiona_fashion/controllers/authentication/otp_controller.dart';
+import 'package:fiona_fashion/views/nav_screen.dart';
 import 'package:fiona_fashion/widgets/custom_text_widget.dart';
 import 'package:fiona_fashion/widgets/full_width_button.dart';
 import 'package:fiona_fashion/widgets/otp_text_field.dart';
@@ -66,7 +67,7 @@ class OtpScreen extends StatelessWidget {
                     ),
 
                     SizedBox(height: 30,),
-                    FullWidthButton(title: "Verify OTP",onTap: (){Get.to(OtpScreen());},),
+                    FullWidthButton(title: "Verify OTP",onTap: (){Get.to(NavScreen());},),
                   ],
                 ),
               )
