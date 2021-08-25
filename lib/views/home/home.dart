@@ -54,21 +54,21 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CustomTextWidget(
-                        "Fiona Fashion",
-                        style:
-                            CustomTextStyle.appBarTextStyle(color: Colors.white),
-                      ),
-                      Icon(
-                        Icons.notifications,
-                        color: Colors.white,
-                      )
-                    ],
-                  ),
+                  // SizedBox(height: 20,),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     CustomTextWidget(
+                  //       "Fiona Fashion",
+                  //       style:
+                  //           CustomTextStyle.appBarTextStyle(color: Colors.white),
+                  //     ),
+                  //     Icon(
+                  //       Icons.notifications,
+                  //       color: Colors.white,
+                  //     )
+                  //   ],
+                  // ),
 
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,11 +84,11 @@ class _HomeState extends State<Home> {
 
                   CustomTextWidget(
                     "Find cool products",
-                    style: CustomTextStyle.ultraBoldTextStyle1(color: Colors.white,letterSpacing: 2),
+                    style: CustomTextStyle.ultraBoldTextStyle1(color: Colors.white,letterSpacing: 1),
                   ),
                   CustomTextWidget(
                     "that fit your style",
-                    style: CustomTextStyle.ultraBoldTextStyle1(color: Colors.white,letterSpacing: 2),
+                    style: CustomTextStyle.ultraBoldTextStyle1(color: Colors.white,letterSpacing: 1),
 
                   ),
                   SizedBox(height: 20,),

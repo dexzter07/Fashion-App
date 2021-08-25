@@ -5,7 +5,7 @@ import 'app_colors.dart';
 class CustomTextStyle {
 
   static ultraBoldTextStyle1({Color color,double letterSpacing}){
-    return TextStyle( fontSize:28,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: "PoppinsBold",letterSpacing: letterSpacing==null? null : letterSpacing  );
+    return TextStyle( fontSize:26,fontWeight: FontWeight.w700,color: color==null?AppColors.textDarkColor:color,fontFamily: "PoppinsBold",letterSpacing: letterSpacing==null? null : letterSpacing  );
   }
 
   static ultraBoldTextStyle({Color color,double letterSpacing}){
