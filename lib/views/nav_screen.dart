@@ -1,10 +1,9 @@
-import 'account/account.dart';
-import 'cart/cart.dart';
-import 'favourite/favourite.dart';
+import 'package:fiona_fashion/views/cart/cart.dart';
+import 'package:fiona_fashion/views/favourite/favourite.dart';
+import 'package:fiona_fashion/views/home/home.dart';
+import 'package:fiona_fashion/views/profile/account.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-
-import 'home/home.dart';
 
 
 class NavScreen extends StatefulWidget {
@@ -79,7 +78,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       Home(),
       Favourite(),
       Cart(),
-      Account()
+      ProfileScreen()
     ];
   }
 

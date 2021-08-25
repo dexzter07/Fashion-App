@@ -76,14 +76,14 @@ class CustomTextFieldWithIcon extends StatelessWidget {
           suffixIcon: icon,
           contentPadding: contentPadding != null ? contentPadding : null,
           hintText:  hintText == null ? "" : hintText,
-          hintStyle: CustomTextStyle.smallTextStyle1(color: Colors.grey),
+          hintStyle: CustomTextStyle.smallTextStyle1(color: Colors.white),
           errorMaxLines: 1,
           enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.withOpacity(0.4)),
+              borderSide: BorderSide(color: Colors.grey.withOpacity(0.9)),
               borderRadius: borderRadius == null ?  BorderRadius.circular(30) : borderRadius
           ),
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.blue.withOpacity(0.4)),
+              borderSide: BorderSide(color: Colors.blue.withOpacity(0.9)),
               borderRadius: borderRadius == null ?  BorderRadius.circular(30) : borderRadius
           ),
           errorBorder: OutlineInputBorder(
