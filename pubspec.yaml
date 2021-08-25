@@ -17,6 +17,7 @@ dependencies:
   persistent_bottom_nav_bar:
   share: ^0.6.5+4
   launch_review: ^2.0.0
+  carousel_pro:
 
 dev_dependencies:
   flutter_test:
