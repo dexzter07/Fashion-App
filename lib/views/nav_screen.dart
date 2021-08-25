@@ -7,14 +7,11 @@ import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 
 class NavScreen extends StatefulWidget {
-
-
   @override
   _NavScreenState createState() => _NavScreenState();
 }
 
 class _NavScreenState extends State<NavScreen> {
-
 
   @override
   Widget build(BuildContext context) {

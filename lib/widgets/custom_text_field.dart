@@ -71,7 +71,7 @@ class CustomTextFieldWithIcon extends StatelessWidget {
       obscureText: obSecureText==null? false : obSecureText,
       validator: validator,
       keyboardType: numberButton==true ? TextInputType.number : null,
-      style: CustomTextStyle.smallTextStyle1(),
+      style: CustomTextStyle.smallTextStyle1(color: Colors.white),
       decoration: InputDecoration(
           suffixIcon: icon,
           contentPadding: contentPadding != null ? contentPadding : null,
@@ -83,7 +83,7 @@ class CustomTextFieldWithIcon extends StatelessWidget {
               borderRadius: borderRadius == null ?  BorderRadius.circular(30) : borderRadius
           ),
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.blue.withOpacity(0.9)),
+              borderSide: BorderSide(color: Colors.grey.withOpacity(0.9)),
               borderRadius: borderRadius == null ?  BorderRadius.circular(30) : borderRadius
           ),
           errorBorder: OutlineInputBorder(
