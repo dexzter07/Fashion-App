@@ -14,6 +14,7 @@ dependencies:
   get: ^3.26.0
   cupertino_icons: ^1.0.0
   lottie: ^0.7.0
+  persistent_bottom_nav_bar:
 
 dev_dependencies:
   flutter_test:
@@ -23,8 +24,9 @@ flutter:
   uses-material-design: true
 
   assets:
-     - assets/images/
-     - assets/animations/
+
+    - assets/animations/
+    - assets/images/
 
   fonts:
     - family: PoppinsRegular
