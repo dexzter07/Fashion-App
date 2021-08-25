@@ -1,9 +1,10 @@
-import 'file:///C:/Users/91893/Desktop/New%20folder/Fashion-App/lib/views/account/account.dart';
-import 'file:///C:/Users/91893/Desktop/New%20folder/Fashion-App/lib/views/cart/cart.dart';
-import 'file:///C:/Users/91893/Desktop/New%20folder/Fashion-App/lib/views/favourite/favourite.dart';
-import 'file:///C:/Users/91893/Desktop/New%20folder/Fashion-App/lib/views/home/home.dart';
+import 'account/account.dart';
+import 'cart/cart.dart';
+import 'favourite/favourite.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+
+import 'home/home.dart';
 
 
 class NavScreen extends StatefulWidget {
