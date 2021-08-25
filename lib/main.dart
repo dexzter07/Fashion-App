@@ -1,4 +1,5 @@
 import 'package:fiona_fashion/views/authentication/login_screen.dart';
+import 'package:fiona_fashion/views/nav_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -8,7 +9,7 @@ void main(){
       GetMaterialApp(
         debugShowCheckedModeBanner: false,
         defaultTransition: Transition.rightToLeft,
-        home: LoginScreen(),
+        home: BottomNavScreen(),
       )
   );
 }
