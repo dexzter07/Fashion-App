@@ -3,6 +3,7 @@ import 'package:fiona_fashion/configs/styles/app_colors.dart';
 import 'package:fiona_fashion/configs/styles/custom_text_style.dart';
 import 'package:fiona_fashion/models/home/carousel_model.dart';
 import 'package:fiona_fashion/models/home/size_model.dart';
+import 'package:fiona_fashion/views/cart/cart.dart';
 import 'package:fiona_fashion/widgets/carousel_widget.dart';
 import 'package:fiona_fashion/widgets/custom_appbar.dart';
 import 'package:fiona_fashion/widgets/custom_text_widget.dart';
@@ -101,7 +102,13 @@ class _DetailPageState extends State<DetailPage> {
           SizedBox(height: 40,),
           Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
-              child: FullWidthButton(title: "Add to Cart",onTap: (){},)),
+              child: FullWidthButton(
+                title: "Add to Cart",
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(context){return Cart();}));
+                },
+              )
+          ),
           SizedBox(height: 10,),
 
         ],
