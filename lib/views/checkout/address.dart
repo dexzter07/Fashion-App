@@ -1,9 +1,11 @@
 import 'package:fiona_fashion/configs/styles/app_colors.dart';
 import 'package:fiona_fashion/configs/styles/custom_text_style.dart';
 import 'package:fiona_fashion/views/checkout/edit_address.dart';
+import 'package:fiona_fashion/views/success.dart';
 import 'package:fiona_fashion/widgets/custom_appbar.dart';
 import 'package:fiona_fashion/widgets/custom_inkwell.dart';
 import 'package:fiona_fashion/widgets/custom_text_widget.dart';
+import 'package:fiona_fashion/widgets/full_width_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +27,15 @@ class _AddressState extends State<Address> {
             CustomAppBar(title: "Select Address",),
             SizedBox(height: 20,),
             AddressContainer(),
+
+            Expanded(child: SizedBox(height: 40,)),
+            Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                child: FullWidthButton(title: "Proceed for Payment",onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => OrderSuccess()));
+
+                },)),
+            SizedBox(height: 10,),
           ],
         ),
       ),
@@ -54,7 +65,8 @@ class AddressContainer extends StatelessWidget {
           SizedBox(height: 10,),
           CustomInkWell(
             onTap: (){
-              Get.to(EditAddress());
+              Navigator.push(context,MaterialPageRoute(builder: (context) => EditAddress()));
+
             },
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),

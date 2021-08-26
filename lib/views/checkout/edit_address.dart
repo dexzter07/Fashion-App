@@ -144,7 +144,9 @@ class _EditAddressState extends State<EditAddress> {
             SizedBox(height: 40,),
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
-                child: FullWidthButton(title: "Deliver Here",onTap: (){},)),
+                child: FullWidthButton(title: "Deliver Here",onTap: (){
+                  Navigator.pop(context);
+                },)),
             SizedBox(height: 10,),
           ],
         ),
