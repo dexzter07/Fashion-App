@@ -3,6 +3,8 @@ import 'package:fiona_fashion/configs/styles/app_colors.dart';
 import 'package:fiona_fashion/configs/styles/custom_text_style.dart';
 import 'package:fiona_fashion/models/home/category_model.dart';
 import 'package:fiona_fashion/models/home/product_model.dart';
+import 'package:fiona_fashion/views/products/all_products.dart';
+import 'package:fiona_fashion/views/products/category_screen.dart';
 import 'package:fiona_fashion/widgets/custom_inkwell.dart';
 import 'package:fiona_fashion/widgets/custom_sliver_grid_delegate.dart';
 import 'package:fiona_fashion/widgets/custom_text_field.dart';
@@ -118,7 +120,9 @@ class _HomeState extends State<Home> {
                         color: AppColors.textDarkColor),
                   ),
                   CustomInkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context){return CategoryScreen();}));
+                      },
                       child: CustomTextWidget(
                         "See All",
                         style: CustomTextStyle.mediumTextStyle(color: AppColors.primaryDarkOrange),
@@ -147,7 +151,9 @@ class _HomeState extends State<Home> {
                         color: AppColors.textDarkColor),
                   ),
                   CustomInkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context){return AllProductScreen(title: "Products Promo",); }));
+                      },
                       child: CustomTextWidget(
                         "See All",
                         style: CustomTextStyle.mediumTextStyle(color: AppColors.primaryDarkOrange),
@@ -183,17 +189,23 @@ class CategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8,vertical: 10),
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: 35,
-            backgroundImage: AssetImage(categoryModel.image),
-          ),
-          SizedBox(height: 7,),
-          CustomTextWidget(categoryModel.title,style: CustomTextStyle.mediumTextStyle(),)
-        ],
+    return CustomInkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder:(context){return AllProductScreen(title: categoryModel.title,); }));
+
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 8,vertical: 10),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 35,
+              backgroundImage: AssetImage(categoryModel.image),
+            ),
+            SizedBox(height: 7,),
+            CustomTextWidget(categoryModel.title,style: CustomTextStyle.mediumTextStyle(),)
+          ],
+        ),
       ),
     );
   }

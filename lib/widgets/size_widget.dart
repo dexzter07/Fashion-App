@@ -14,9 +14,8 @@ class SizeWidget extends StatelessWidget {
     return Container(
       height: 70,
       width: 70,
-
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(50)),
+        shape: BoxShape.circle,
         color:Colors.grey[200],
           border: Border.all(color: Colors.deepOrangeAccent,width: 2)
       ),

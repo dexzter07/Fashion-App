@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget {
 
   final String title;
-  CustomAppBar({this.title});
+  final bool hideBackIcon;
+  CustomAppBar({this.title,this.hideBackIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 12),
       child: Row(
         children: [
-          CustomInkWell(
+          hideBackIcon == true ? Container() : CustomInkWell(
             onTap: (){
               Navigator.pop(context);
             },

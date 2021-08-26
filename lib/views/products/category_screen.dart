@@ -1,16 +1,19 @@
 import 'package:fiona_fashion/configs/styles/app_colors.dart';
-import 'package:fiona_fashion/models/home/product_model.dart';
+import 'package:fiona_fashion/models/home/category_model.dart';
 import 'package:fiona_fashion/widgets/custom_appbar.dart';
 import 'package:fiona_fashion/widgets/custom_sliver_grid_delegate.dart';
 import 'package:fiona_fashion/widgets/product_widget.dart';
 import 'package:flutter/material.dart';
 
-class FavouriteScreen extends StatelessWidget {
+class CategoryScreen extends StatelessWidget {
 
-  List<ProductModel> _productList = [
-    ProductModel(imageUrl: "assets/images/pants.jpg",title: "Blue Jeans Pants",subTitle: "Pants",),
-    ProductModel(imageUrl: "assets/images/tshirt.jpg",title: "H&M T-Shirt",subTitle: "T-Shirt",),
-    ProductModel(imageUrl: "assets/images/shoes2.jpeg",title: "Air Jordon Shoe",subTitle: "Shoes",),
+  List<CategoryModel> _categoryList = [
+    CategoryModel(image: "assets/images/tshirt1.png",title: "T-Shirt"),
+    CategoryModel(image: "assets/images/goun1.png",title: "Goun"),
+    CategoryModel(image: "assets/images/shoes1.png",title: "Shoes"),
+    CategoryModel(image: "assets/images/coat.png",title: "Coat"),
+    CategoryModel(image: "assets/images/shorts.png",title: "Shorts"),
+    CategoryModel(image: "assets/images/pants1.png",title: "Pants"),
   ];
 
   @override
@@ -21,7 +24,7 @@ class FavouriteScreen extends StatelessWidget {
         child: Column(
           children: [
 
-            CustomAppBar(title: "My Favourites",hideBackIcon: true,),
+            CustomAppBar(title: "Category",),
             SizedBox(height: 10,),
 
             Expanded(
@@ -30,11 +33,11 @@ class FavouriteScreen extends StatelessWidget {
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
                     crossAxisCount: 2,
-                    height: 230.0,
+                    height: 210.0,
                   ),
-                  itemCount: _productList.length,
+                  itemCount: _categoryList.length,
                   itemBuilder: (context,index){
-                    return ProductWidget(productModel: _productList[index],);
+                    return CategoryWidget(categoryModel: _categoryList[index],);
                   }
               ),
             )

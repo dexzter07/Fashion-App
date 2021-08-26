@@ -10,7 +10,7 @@ import 'package:fiona_fashion/widgets/full_width_button.dart';
 import 'package:fiona_fashion/widgets/size_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 
 class DetailPage extends StatefulWidget {
   @override
@@ -47,7 +47,6 @@ class _DetailPageState extends State<DetailPage> {
               autoplay: false,
               images:
                 _carouselModel.map((e) => CustomCarousel(image: e,)).toList(),
-
               dotSize: 8.0,
               dotColor: Colors.black,
               dotBgColor: Colors.transparent,
@@ -60,8 +59,8 @@ class _DetailPageState extends State<DetailPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomTextWidget("Denim Jeans", style: CustomTextStyle.ultraBoldTextStyle(),),
-                CustomTextWidget("\$1200", style: CustomTextStyle.ultraBoldTextStyle(color: AppColors.primaryDarkOrange),)
+                CustomTextWidget("Denim Jeans", style: CustomTextStyle.bigTextStyle(),),
+                CustomTextWidget("\$1200", style: CustomTextStyle.boldMediumTextStyle(color: AppColors.primaryDarkOrange),)
 
               ],
             ),
@@ -70,30 +69,36 @@ class _DetailPageState extends State<DetailPage> {
             margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
             child: Row(
               children: [
-                Icon(Icons.padding, color: Colors.deepOrangeAccent,size: 33,),
-                CustomTextWidget("  Details", style: CustomTextStyle.ultraBoldTextStyle(color: AppColors.textDarkColor),)
+                Icon(Icons.padding, color: Colors.deepOrangeAccent,size: 25,),
+                CustomTextWidget(" Details", style: CustomTextStyle.boldMediumTextStyle(color: AppColors.textDarkColor),)
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: CustomTextWidget("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
-              style: CustomTextStyle.mediumTextStyle(),),
+              style: CustomTextStyle.mediumTextStyle(color: Color(0xFF787A91)),),
           ),
+          SizedBox(height: 20,),
+
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
             child: Row(
               children: [
-                Icon(Icons.shopping_bag, color: Colors.deepOrangeAccent,size: 33,),
-                CustomTextWidget("  Size Item", style: CustomTextStyle.ultraBoldTextStyle(color: AppColors.textDarkColor),)
+                Icon(Icons.shopping_bag, color: Colors.deepOrangeAccent,size: 25,),
+                CustomTextWidget("  Size Item", style: CustomTextStyle.boldMediumTextStyle(color: AppColors.textDarkColor),)
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: _sizeModel.map((e) => SizeWidget(text: e,)).toList()
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: _sizeModel.map((e) => Expanded(child: SizeWidget(text: e,))).toList()
+            ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 40,),
           Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
               child: FullWidthButton(title: "Add to Cart",onTap: (){},)),

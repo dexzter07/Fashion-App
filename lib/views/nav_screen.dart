@@ -73,7 +73,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   List<Widget> _buildScreens() {
     return [
       Home(),
-      Favourite(),
+      FavouriteScreen(),
       Cart(),
       ProfileScreen()
     ];
